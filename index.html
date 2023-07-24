@@ -3,274 +3,428 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technical Design Porfolio</title>
+  
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mediaqueries.css">
+  
+  <title>Document</title>
 </head>
 <body>
-  <nav id="desktop-nav">
-    <div class="logo">Jam Jes</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Header Profile -->
+  <header class="profile container">
+    <!-- Dark Mode Toggle -->
+    <i class="ri-moon-line change-theme" id="theme-button"></i>
+    
+    <div class="profile__container grid">
+      <div class="profile__data">
+        <div class="profile__border">
+          <div class="profile__perfil">
+            <img src="./assets/img/perfil.jpg" alt="">
+          </div>
+        </div>
 
-  <nav id="hamburger-nav">
-    <div class="logo">Jam Jes</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <h3 class="profile__subtitle">Hi, I'm</h3>
+        <h2 class="profile__name">Jam Jesurasa</h2>
+        <h3 class="profile__profession">A freelance Games<br>Technical Designer</h3>
       </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      
+      <div class="profile__info grid">
+        <div class="profile__info-group">
+          <h3 class="profile__info-number">5+ Years</h3>
+          <p class="profile__infor-description">
+            Of Academic Experience<br>
+            in Computer Games<br>
+            Design and Programming
+          </p>
+        </div>
+        <div class="profile__info-group">
+          <h3 class="profile__info-number">1st Place <i class="ri-medal-line"></i></h3>
+          <p class="profile__infor-description">
+            At GradEx 2022 for<br>
+            Technical Design<br>
+            (Project: ECHO)
+          </p>
+        </div>
       </div>
-    </div>
-  </nav>
 
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/profile-pic-main.jpg" alt="Jam Jes Profile Picture">
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1"> Hello, I'm</p>
-      <h1 class="title">Jam Jesurasa</h1>
-      <p class="section__text__p2">Games Technical Designer</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
-          Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Me
-        </button>
-      </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/jam-jesurasa'">
-        <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://www.github.com/jamjes'">
-      </div>
-    </div>
-  </section>
+      <div class="profile__buttons">
+        <a href="./assets/pdf/cv.pdf" target="_blank" class="button">
+          View CV <i class="ri-file-text-line"></i>
+        </a>
 
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/about-pic.png" alt="profile picture" class="about-pic">
+        <a href="mailto:jesurasa.jam@outlook.com" target="_blank" class="button">
+          Hire Me <i class="ri-mail-line"></i>
+        </a>
+        <!--
+        <div class="profile__buttons-small">
+          <a href="mailto: jesurasa.jam@outlook.com" target="_blank" class="button button__small button__gray">
+            <i class="ri-mail-line"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jam-jesurasa" target="_blank" class="button button__small button__gray">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+        </div>
+        -->
       </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-        <div class="details-container">
-          <img src="./assets/experience.png" alt="experience-icon" class="icon">
-          <h3>Experience</h3>
-          <p>5+ years Academic Experience in <br>Games Design and Programming</p>
-        </div>
-        <div class="details-container">
-          <img src="./assets/experience.png" alt="experience-icon" class="icon">
-          <h3>Education</h3>
-          <p>MSc in Arts and Creative Technologies <br> (By Negotiated Study) <br> BSc in Computer Games Design and Programming</p>
-        </div>
-      </div>
-      <div class="text-container">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur magnam molestiae accusantium? Expedita velit facilis, voluptatum quae cum saepe reiciendis minus dolores vero ut cumque perspiciatis! Quis rem impedit voluptates cupiditate reiciendis deserunt repudiandae velit quasi commodi ullam, autem ratione rerum. Nesciunt ullam quis corrupti minima consequatur itaque sint vel.</p>
-      </div>
-    </div>
-  </div>
-  <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#experience'">
-  </section>
-  
-  <section id="experience">
-    <p class="section__text__p1">Explore More</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-subtitle">Game Engines</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Unreal Engine 5</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Unreal Engine 4</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Unity</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>GameMaker</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Godot</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Pending</h3>
-                <p>Pending</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-subtitle">Languages</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Unreal Engine 5</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Unreal Engine 4</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Unity</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>GameMaker</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Godot</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-              <div>
-                <h3>Pending</h3>
-                <p>Pending</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#projects'">
-  </section>
-  
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project-1.png" alt="Project 1 " class="project-img">
-          </div>
-          <h2 class="experience-subtitle project-title">Project 1</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project-2.png" alt="Project 2 " class="project-img">
-          </div>
-          <h2 class="experience-subtitle project-title">Project 2</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/project-3.png" alt="Project 3 " class="project-img">
-          </div>
-          <h2 class="experience-subtitle project-title">Project 3</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#contact'">
-  </section>
 
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
-        <p><a href="mailto:jesurasa.jam@outlook.com">jesurasa.jam@outlook.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
-        <p><a href="https://www.linkedin.com/in/jam-jesurasa">Linkedin</a></p>
-      </div>
-  </section>
-
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <div class="profile__social-section">
+        <h3 class="profile__social-label">Here are my socials:</h3>
+        <ul class="profile__social">
+          <a href="https://www.youtube.com/channel/UC4g1vMm1Qyc0YKVSpfJFllQ" target= "_blank" class="profile__social-link">
+            <i class="ri-youtube-line"></i>
+          </a>
+          <a href="https://github.com/jamjes" target= "_blank" class="profile__social-link">
+            <i class="ri-github-line"></i>
+          </a>
+          <a href="https://studiover.itch.io/" target= "_blank" class="profile__social-link">
+            <i class="ri-game-line"></i>
+          </a>
+          <a href="https://linkedin.com/in/jam-jesurasa" target= "_blank" class="profile__social-link">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
         </ul>
       </div>
-    </nav>
-    <p>Copyright &#169; 2023 Jam Jesurasa</p>
+    </div>
+  </header>
+
+  
+  <!-- Main -->
+  <main class="main">
+    <section class="filters container">
+      <!-- Filters Tabs -->
+      <ul class="filters__content">
+        <button class="filters__button filter-tab-active" data-target="#projects">
+          Projects
+        </button>
+
+        <button class="filters__button" data-target="#skills">
+          Skills
+        </button>
+      </ul>
+
+      <div class="filters__sections">
+        <!-- Projects -->
+        <div class="projects__content grid filters__active" data-content id="projects">
+          <article class="projects__card">
+            <img src="./assets/img/project-1-cover.png" alt="Project 1" class="projects__img">
+
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Unity 3.x - 2022</span>
+                  <h3 class="projects__title">ECHO</h3>
+                  <p class="projects__description">
+                    <span>Category:</span> University Project<br>
+                    <span>Role:</span> Game Developer<br>
+                    <span>Genre:</span> 2D Puzzle Platformer<br>
+                    <span>Premise:</span> Platforming games can be difficult and having to restart every time can be tedious. What if instead of restarting, you could just ‘rewind’ to a point before you fail?
+                  </p>
+                  <a href="" class="projects__button button button__small">
+                    <i class="ri-more-line"></i>
+                  </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="projects__card">
+            <img src="./assets/img/project-2-cover.jpg" alt="Project 1" class="projects__img">
+
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Godot - 2021</span>
+                  <h3 class="projects__title">Magjump</h3>
+                  <p class="projects__description">
+                    <span>Category:</span> Personal Project<br>
+                    <span>Role:</span> Game Developer<br>
+                    <span>Genre:</span> 2D Puzzle Platformer<br>
+                    <span>Premise:</span> Being built completely out of cobalt has made you extremely durable. However, the sheer weight of your materials make it impossible for you to move. Maybe you can figure out a way to escape this facility using electromagnetism.
+                  </p>
+                  <a href="" class="projects__button button button__small">
+                    <i class="ri-more-line"></i>
+                  </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills__content grid" data-content id="skills">
+          <div class="skills__area">
+            <h3 class="skills__title">
+              Engines
+            </h3>
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Unity 3.x</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Unreal Engine 5</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">GameMaker</h3>
+                    <span class="skills__level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Godot 4.x</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Construct 3</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">CryEngine 3</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="skills__area">
+            <h3 class="skills__title">
+              Languages
+            </h3>
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">C#</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">UE's Blueprint<br>Visual Scripting</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">C++</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">HTML / CSS / <br>JavaScript</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Python</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Lua</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Java</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__area">
+            <h3 class="skills__title">
+              Design
+            </h3>
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Adobe<br>Photoshop</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Aseprite</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">GIMP</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Blender</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Autodesk<br>Maya</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Autodesk<br>3DS Max</h3>
+                    <span class="skills__level">Basic</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__area">
+            <h3 class="skills__title">
+              Project Management
+            </h3>
+            <div class="skills__box">
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">JIRA</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Github</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Trello</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills__group">
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Microsoft<br>Office 365</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Google Docs<br>Editor Suite</h3>
+                    <span class="skills__level">Experienced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer container">
+    <span class="footer__copy">
+      &#169; Jam Jesurasa. All Rights Reserved.
+    </span>
   </footer>
-  <script src="script.js"> </script>
+
+  <!-- JS -->
+  <script src="main.js"></script>
 </body>
 </html>
