@@ -1,6 +1,10 @@
 /* Google 'Poppins' font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+root {
+  -c--lightgrey: #9BA3AF;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +15,14 @@
 }
 
 body {
-  min-height: 100vh;
+  /* */
+  min-height: 200vh;
+  padding: 0 560px;
 }
 
 .header {
+  background-color: aqua;
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -26,10 +34,7 @@ body {
   z-index: 100;
 }
 
-.navbar {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 60px;
+.test {
+  min-height: 500px;
+  background-color: antiquewhite;
 }
